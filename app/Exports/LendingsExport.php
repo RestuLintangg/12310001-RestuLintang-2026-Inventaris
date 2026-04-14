@@ -30,8 +30,8 @@ class LendingsExport implements FromArray,  WithEvents
             $l->total,
             $l->name,
             $l->ket,
-            $l->created_at->format('M d, Y'),
-            $l->return_date ? \Carbon\Carbon::parse($l->return_date)->format('M d, Y') : '-',
+            $l->created_at->format('M d, Y h:i A'),
+            $l->return_date ? \Carbon\Carbon::parse($l->return_date)->format('M d, Y h:i A') : '-',
             $l->edited_by ? $l->edited_by : '-'
         ];
         }
